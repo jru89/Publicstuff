@@ -1,0 +1,65 @@
+<svg viewBox="0 0 620 320" xmlns="http://www.w3.org/2000/svg">
+  <title>Traffic light meanings, including tram signals</title>
+  <desc>Diagram of standard car traffic light signals (red, orange, green) alongside tram signals, which use white shapes instead of colors: a horizontal bar means stop (like red), a circle means prepare to stop (like orange), an inverted triangle means go (like green), and vertical or diagonal bars restrict the direction of travel.</desc>
+  <rect width="620" height="320" fill="#f8fafc"/>
+  <text x="310" y="24" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#1e293b">Traffic light meanings</text>
+
+  <!-- Car signal housing -->
+  <text x="90" y="50" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#1e293b">Cars</text>
+  <rect x="60" y="60" width="60" height="170" rx="14" fill="#1e293b"/>
+  <circle cx="90" cy="95" r="20" fill="#ef4444"/>
+  <circle cx="90" cy="145" r="20" fill="#f59e0b"/>
+  <circle cx="90" cy="195" r="20" fill="#22c55e"/>
+
+  <g font-family="sans-serif" font-size="11.5">
+    <text x="150" y="90" font-weight="700" fill="#1e293b">Red</text>
+    <text x="150" y="104" fill="#64748b">Stop at the stop line</text>
+
+    <text x="150" y="140" font-weight="700" fill="#1e293b">Orange / yellow</text>
+    <text x="150" y="154" fill="#64748b">Stop unless unsafe to do so</text>
+
+    <text x="150" y="190" font-weight="700" fill="#1e293b">Green</text>
+    <text x="150" y="204" fill="#64748b">Proceed if the intersection is clear</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="370" y1="50" x2="370" y2="270" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <!-- Tram signals: white shapes instead of colors -->
+  <text x="470" y="50" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#1e293b">Trams</text>
+  <rect x="410" y="60" width="60" height="170" rx="14" fill="#1e293b"/>
+
+  <!-- Horizontal bar = stop (like red) -->
+  <rect x="425" y="90" width="30" height="8" rx="2" fill="#f8fafc"/>
+  <!-- Circle = prepare to stop (like orange) -->
+  <circle cx="440" cy="145" r="13" fill="none" stroke="#f8fafc" stroke-width="4"/>
+  <!-- Inverted triangle = go (like green) -->
+  <path d="M 425,182 L 455,182 L 440,205 Z" fill="#f8fafc"/>
+
+  <g font-family="sans-serif" font-size="11.5">
+    <text x="500" y="90" font-weight="700" fill="#1e293b">Bar</text>
+    <text x="500" y="104" fill="#64748b">Stop (like red)</text>
+
+    <text x="500" y="140" font-weight="700" fill="#1e293b">Circle</text>
+    <text x="500" y="154" fill="#64748b">Prepare to stop (like orange)</text>
+
+    <text x="500" y="190" font-weight="700" fill="#1e293b">Inverted triangle</text>
+    <text x="500" y="204" fill="#64748b">Go (like green)</text>
+  </g>
+
+  <!-- Direction bars -->
+  <g transform="translate(410,240)">
+    <rect x="0" y="0" width="90" height="50" rx="8" fill="#e2e8f0"/>
+    <line x1="20" y1="10" x2="20" y2="40" stroke="#1e293b" stroke-width="5"/>
+    <text x="55" y="20" font-family="sans-serif" font-size="10" font-weight="700" fill="#1e293b">Vertical</text>
+    <text x="55" y="33" font-family="sans-serif" font-size="9" fill="#64748b">Straight only</text>
+  </g>
+  <g transform="translate(520,240)">
+    <rect x="0" y="0" width="90" height="50" rx="8" fill="#e2e8f0"/>
+    <line x1="10" y1="40" x2="30" y2="10" stroke="#1e293b" stroke-width="5"/>
+    <text x="55" y="20" font-family="sans-serif" font-size="10" font-weight="700" fill="#1e293b">Diagonal</text>
+    <text x="55" y="33" font-family="sans-serif" font-size="9" fill="#64748b">That direction only</text>
+  </g>
+
+  <text x="310" y="300" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#64748b">Never stop on a pedestrian crossing while waiting. Two flashing white lamps: crossing traffic may still be present.</text>
+</svg>

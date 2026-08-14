@@ -1,0 +1,4 @@
+# Local dev tooling, not needed for the deployed app
+.claude/
+.kittify/
+kitty-ops/

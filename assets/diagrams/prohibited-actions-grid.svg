@@ -1,0 +1,51 @@
+<svg viewBox="0 0 420 240" xmlns="http://www.w3.org/2000/svg">
+  <title>Prohibited actions while riding</title>
+  <desc>Icon grid of actions prohibited while riding a motorcycle: using a handheld phone, letting go of the handlebars, riding with feet off the footrests, and towing or being towed.</desc>
+  <rect width="420" height="240" fill="#f8fafc"/>
+  <text x="210" y="24" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#1e293b">Prohibited while riding</text>
+
+  <g font-family="sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#1e293b">
+    <!-- Handheld phone: phone shape held to an ear -->
+    <g transform="translate(20,45)">
+      <rect width="170" height="75" rx="8" fill="#fee2e2"/>
+      <circle cx="85" cy="30" r="14" fill="none" stroke="#0f172a" stroke-width="3"/>
+      <rect x="93" y="26" width="20" height="34" rx="5" fill="#0f172a" transform="rotate(20 103 43)"/>
+      <rect x="98" y="30" width="10" height="18" rx="2" fill="#f8fafc" transform="rotate(20 103 43)"/>
+      <line x1="62" y1="10" x2="118" y2="55" stroke="#ef4444" stroke-width="3.5"/>
+      <line x1="118" y1="10" x2="62" y2="55" stroke="#ef4444" stroke-width="3.5"/>
+      <text x="85" y="70">Handheld phone</text>
+    </g>
+
+    <!-- No hands on bars: handlebar with grips -->
+    <g transform="translate(220,45)">
+      <rect width="170" height="75" rx="8" fill="#fee2e2"/>
+      <line x1="55" y1="32" x2="135" y2="32" stroke="#0f172a" stroke-width="5" stroke-linecap="round"/>
+      <rect x="48" y="24" width="14" height="16" rx="4" fill="#0f172a"/>
+      <rect x="128" y="24" width="14" height="16" rx="4" fill="#0f172a"/>
+      <line x1="60" y1="12" x2="130" y2="52" stroke="#ef4444" stroke-width="3.5"/>
+      <line x1="130" y1="12" x2="60" y2="52" stroke="#ef4444" stroke-width="3.5"/>
+      <text x="105" y="70">Letting go of bars</text>
+    </g>
+
+    <!-- Feet off pegs: boot lifted above a footpeg -->
+    <g transform="translate(20,140)">
+      <rect width="170" height="75" rx="8" fill="#fee2e2"/>
+      <path d="M 70,10 L 70,28 L 60,28 L 60,38 L 105,38 L 105,15 L 90,15 L 90,10 Z" fill="#0f172a"/>
+      <rect x="70" y="52" width="30" height="8" rx="3" fill="#334155"/>
+      <line x1="55" y1="18" x2="105" y2="55" stroke="#ef4444" stroke-width="3.5"/>
+      <line x1="105" y1="18" x2="55" y2="55" stroke="#ef4444" stroke-width="3.5"/>
+      <text x="85" y="70">Feet off footrests</text>
+    </g>
+
+    <!-- Towing: two vehicles connected by a tow rope -->
+    <g transform="translate(220,140)">
+      <rect width="170" height="75" rx="8" fill="#fee2e2"/>
+      <rect x="40" y="24" width="34" height="18" rx="4" fill="#0f172a"/>
+      <rect x="116" y="24" width="34" height="18" rx="4" fill="#0f172a"/>
+      <line x1="74" y1="33" x2="116" y2="33" stroke="#0f172a" stroke-width="3" stroke-dasharray="6 5"/>
+      <line x1="55" y1="12" x2="135" y2="55" stroke="#ef4444" stroke-width="3.5"/>
+      <line x1="135" y1="12" x2="55" y2="55" stroke="#ef4444" stroke-width="3.5"/>
+      <text x="95" y="70">Towing / being towed</text>
+    </g>
+  </g>
+</svg>

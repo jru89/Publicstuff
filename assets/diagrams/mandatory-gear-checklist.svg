@@ -1,0 +1,36 @@
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+  <title>Mandatory riding gear</title>
+  <desc>Simple rider silhouette with labeled callouts for the five pieces of mandatory riding gear: helmet, gloves, jacket with long sleeves, long trousers, and boots covering the ankles.</desc>
+  <rect width="400" height="320" fill="#f8fafc"/>
+  <text x="200" y="24" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#1e293b">Mandatory gear</text>
+
+  <!-- Rider silhouette, standing, front-facing -->
+  <circle cx="200" cy="70" r="24" fill="#0f172a"/> <!-- helmet -->
+  <rect x="184" y="94" width="32" height="70" rx="10" fill="#0f172a"/> <!-- jacket torso -->
+  <line x1="184" y1="105" x2="150" y2="150" stroke="#0f172a" stroke-width="14" stroke-linecap="round"/> <!-- left arm -->
+  <line x1="216" y1="105" x2="250" y2="150" stroke="#0f172a" stroke-width="14" stroke-linecap="round"/> <!-- right arm -->
+  <circle cx="147" cy="156" r="9" fill="#334155"/> <!-- left glove -->
+  <circle cx="253" cy="156" r="9" fill="#334155"/> <!-- right glove -->
+  <line x1="192" y1="162" x2="185" y2="240" stroke="#334155" stroke-width="15" stroke-linecap="round"/> <!-- left leg / trousers -->
+  <line x1="208" y1="162" x2="215" y2="240" stroke="#334155" stroke-width="15" stroke-linecap="round"/> <!-- right leg / trousers -->
+  <rect x="172" y="240" width="26" height="16" rx="5" fill="#0f172a"/> <!-- left boot -->
+  <rect x="202" y="240" width="26" height="16" rx="5" fill="#0f172a"/> <!-- right boot -->
+
+  <!-- Callout lines and labels -->
+  <line x1="222" y1="65" x2="290" y2="50" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="294" y="54" font-family="sans-serif" font-size="12" font-weight="700" fill="#1e293b">Helmet (mark E)</text>
+
+  <line x1="147" y1="156" x2="80" y2="150" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="20" y="154" font-family="sans-serif" font-size="12" font-weight="700" fill="#1e293b">Gloves</text>
+
+  <line x1="216" y1="120" x2="290" y2="120" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="294" y="124" font-family="sans-serif" font-size="12" font-weight="700" fill="#1e293b">Long-sleeve jacket</text>
+
+  <line x1="210" y1="200" x2="290" y2="200" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="294" y="204" font-family="sans-serif" font-size="12" font-weight="700" fill="#1e293b">Long trousers</text>
+
+  <line x1="215" y1="248" x2="290" y2="260" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="294" y="264" font-family="sans-serif" font-size="12" font-weight="700" fill="#1e293b">Boots (cover ankles)</text>
+
+  <text x="200" y="300" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#64748b">Required for both driver and passenger</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg viewBox="0 0 460 240" xmlns="http://www.w3.org/2000/svg">
+  <title>Who counts as a driver</title>
+  <desc>Diagram showing that both motorless vehicle operators (cyclists) and motor vehicle operators (moped, motorcycle, car riders), as well as people leading a draft animal, are legally classed as drivers, distinct from pedestrians.</desc>
+  <rect width="460" height="240" fill="#f8fafc"/>
+  <text x="230" y="24" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#1e293b">Who is a "driver"?</text>
+
+  <rect x="20" y="55" width="420" height="130" rx="12" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="230" y="78" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#1e293b">Driver</text>
+
+  <g font-family="sans-serif" font-size="11" text-anchor="middle">
+    <rect x="45" y="95" width="120" height="70" rx="8" fill="#0284c7"/>
+    <text x="105" y="118" fill="#fff" font-weight="700">Motorless</text>
+    <text x="105" y="134" fill="#fff">vehicle</text>
+    <text x="105" y="150" fill="#fff" font-size="10">e.g. cyclist</text>
+
+    <rect x="175" y="95" width="130" height="70" rx="8" fill="#0284c7"/>
+    <text x="240" y="114" fill="#fff" font-weight="700">Motor vehicle</text>
+    <text x="240" y="130" fill="#fff" font-size="10">moped / motorcycle</text>
+    <text x="240" y="144" fill="#fff" font-size="10">/ car</text>
+
+    <rect x="315" y="95" width="120" height="70" rx="8" fill="#0284c7"/>
+    <text x="375" y="118" fill="#fff" font-weight="700">Leading a</text>
+    <text x="375" y="134" fill="#fff" font-weight="700">draft</text>
+    <text x="375" y="150" fill="#fff" font-weight="700">animal</text>
+  </g>
+
+  <text x="230" y="210" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#64748b">Pushing a broken moped = pedestrian. Pushing a broken motorcycle = still a driver.</text>
+</svg>

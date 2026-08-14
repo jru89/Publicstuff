@@ -1,0 +1,38 @@
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+  <title>Lane position: two-thirds toward the right of the lane</title>
+  <desc>Top-down diagram showing the recommended motorcycle riding position within a marked lane, roughly two-thirds of the way toward the right edge, for better visibility and so overtaking traffic must fully move over.</desc>
+  <rect width="400" height="320" fill="#f8fafc"/>
+
+  <!-- Road surface -->
+  <rect x="60" y="0" width="280" height="320" fill="#64748b"/>
+  <!-- Lane edge lines -->
+  <rect x="60" y="0" width="6" height="320" fill="#f8fafc"/>
+  <rect x="334" y="0" width="6" height="320" fill="#f8fafc"/>
+  <!-- Center-of-lane reference guide (dashed, not the actual lane line) -->
+  <line x1="200" y1="0" x2="200" y2="320" stroke="#94a3b8" stroke-width="2" stroke-dasharray="10 10"/>
+
+  <!-- Two-thirds-right position marker (measured within this lane: 200 to 340) -->
+  <line x1="293" y1="0" x2="293" y2="320" stroke="#0284c7" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <!-- Motorcycle icon (top-down: teardrop body + wheels) at two-thirds-right -->
+  <g transform="translate(293,170)">
+    <ellipse cx="0" cy="0" rx="14" ry="34" fill="#0f172a"/>
+    <circle cx="0" cy="-30" r="7" fill="#1e293b"/>
+    <circle cx="0" cy="30" r="7" fill="#1e293b"/>
+  </g>
+
+  <!-- Sightline / forward visibility arrow -->
+  <line x1="293" y1="130" x2="293" y2="40" stroke="#0284c7" stroke-width="3" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/>
+    </marker>
+  </defs>
+
+  <!-- Labels -->
+  <text x="200" y="20" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#1e293b">Two-thirds toward the right of the lane</text>
+  <text x="200" y="300" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1e293b">Center of lane (reference)</text>
+  <line x1="150" y1="292" x2="190" y2="292" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <text x="345" y="170" font-family="sans-serif" font-size="12" fill="#0284c7" writing-mode="vertical-rl">Recommended position</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg">
+  <title>Cycle path positioning</title>
+  <desc>Top-down diagram showing a cycle path running alongside the roadway, marked by two parallel broken lines, separate from the road lanes where motor vehicles may not drive or park.</desc>
+  <rect width="420" height="220" fill="#f8fafc"/>
+  <text x="210" y="24" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#1e293b">Cycle path</text>
+
+  <rect x="60" y="50" width="60" height="140" fill="#86efac"/>
+  <rect x="120" y="50" width="45" height="140" fill="#94a3b8"/>
+  <line x1="120" y1="50" x2="120" y2="190" stroke="#f8fafc" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="165" y1="50" x2="165" y2="190" stroke="#f8fafc" stroke-width="2" stroke-dasharray="6 5"/>
+  <rect x="165" y="50" width="200" height="140" fill="#64748b"/>
+  <line x1="265" y1="50" x2="265" y2="190" stroke="#f8fafc" stroke-width="2" stroke-dasharray="10 8"/>
+
+  <!-- Cyclist icon -->
+  <g transform="translate(142,120)"><circle r="8" fill="#0284c7"/><circle cx="-11" r="5" fill="none" stroke="#0f172a" stroke-width="2"/><circle cx="11" r="5" fill="none" stroke="#0f172a" stroke-width="2"/></g>
+
+  <text x="90" y="205" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#1e293b">Verge</text>
+  <text x="142" y="205" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#1e293b">Cycle path</text>
+  <text x="265" y="205" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#1e293b">Roadway</text>
+
+  <text x="210" y="35" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#64748b">Not part of the roadway — cars may not drive or park here</text>
+</svg>

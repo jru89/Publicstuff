@@ -1,0 +1,26 @@
+<svg viewBox="0 0 340 300" xmlns="http://www.w3.org/2000/svg">
+  <title>Priority hierarchy</title>
+  <desc>Diagram showing the order of authority for right of way: an authorized person outranks traffic lights, which outrank priority signs, which outrank the default priority-from-the-right rule.</desc>
+  <rect width="340" height="300" fill="#f8fafc"/>
+  <text x="170" y="24" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#1e293b">Priority hierarchy</text>
+
+  <g font-family="sans-serif" font-size="12" font-weight="700">
+    <rect x="60" y="45" width="220" height="42" rx="8" fill="#0f172a"/>
+    <text x="170" y="70" text-anchor="middle" fill="#fff">1. Authorized person</text>
+    <line x1="170" y1="87" x2="170" y2="105" stroke="#1e293b" stroke-width="2" marker-end="url(#pd)"/>
+    <defs><marker id="pd" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L4,8 z" fill="#1e293b"/></marker></defs>
+
+    <rect x="60" y="105" width="220" height="42" rx="8" fill="#1e293b"/>
+    <text x="170" y="130" text-anchor="middle" fill="#fff">2. Traffic lights</text>
+    <line x1="170" y1="147" x2="170" y2="165" stroke="#1e293b" stroke-width="2" marker-end="url(#pd)"/>
+
+    <rect x="60" y="165" width="220" height="42" rx="8" fill="#334155"/>
+    <text x="170" y="190" text-anchor="middle" fill="#fff">3. Priority signs</text>
+    <line x1="170" y1="207" x2="170" y2="225" stroke="#1e293b" stroke-width="2" marker-end="url(#pd)"/>
+
+    <rect x="60" y="225" width="220" height="42" rx="8" fill="#475569"/>
+    <text x="170" y="250" text-anchor="middle" fill="#fff">4. Priority from the right</text>
+  </g>
+
+  <text x="170" y="288" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#64748b">Higher always overrides lower, even for priority vehicles</text>
+</svg>

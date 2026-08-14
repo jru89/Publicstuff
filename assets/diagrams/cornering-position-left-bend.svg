@@ -1,0 +1,32 @@
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+  <title>Cornering position: left-hand bend</title>
+  <desc>Top-down diagram of a left-hand bend showing the motorcycle positioned as far right as possible before entering the bend, then sweeping through toward the inside as the road curves left.</desc>
+  <rect width="400" height="320" fill="#f8fafc"/>
+
+  <!-- Road as a curving band (mirrored version of the right-bend diagram) -->
+  <path d="M 360,300 C 360,150 280,40 60,40 L 60,100 C 240,100 300,190 300,300 Z" fill="#64748b"/>
+  <path d="M 360,300 C 360,150 280,40 60,40" fill="none" stroke="#f8fafc" stroke-width="5"/>
+  <path d="M 300,300 C 300,190 240,100 60,100" fill="none" stroke="#f8fafc" stroke-width="5"/>
+  <path d="M 330,300 C 330,175 255,70 60,70" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="9 9"/>
+
+  <!-- Motorcycle path: far right at entry, sweeping toward inside through the bend -->
+  <path d="M 322,300 C 322,220 305,120 60,90" fill="none" stroke="#0284c7" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/>
+
+  <g transform="translate(322,290)">
+    <ellipse cx="0" cy="0" rx="10" ry="24" fill="#0f172a"/>
+  </g>
+  <g transform="translate(250,140) rotate(45)">
+    <ellipse cx="0" cy="0" rx="10" ry="24" fill="#0f172a"/>
+  </g>
+  <g transform="translate(80,85) rotate(80)">
+    <ellipse cx="0" cy="0" rx="10" ry="24" fill="#0f172a"/>
+  </g>
+
+  <text x="200" y="22" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#1e293b">Left-hand bend</text>
+  <rect x="192" y="298" width="164" height="20" fill="#f8fafc" opacity="0.85"/>
+  <text x="198" y="312" text-anchor="start" font-family="sans-serif" font-size="11" fill="#1e293b">1. Position far right first</text>
+  <rect x="148" y="110" width="110" height="16" fill="#f8fafc" opacity="0.85"/>
+  <text x="200" y="122" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1e293b">2. Sweep through</text>
+  <rect x="25" y="60" width="90" height="16" fill="#f8fafc" opacity="0.85"/>
+  <text x="70" y="72" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1e293b">3. Exit</text>
+</svg>

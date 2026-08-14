@@ -1,0 +1,27 @@
+<svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg">
+  <title>Breath test result thresholds</title>
+  <desc>Bar chart showing the three breath test result zones: Safe below 0.22 mg/l, Alarm between 0.22 and 0.35 mg/l, Positive at 0.35 mg/l or above.</desc>
+  <rect width="420" height="260" fill="#f8fafc"/>
+  <text x="210" y="24" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#1e293b">Breath test result zones</text>
+
+  <!-- Scale bar -->
+  <rect x="50" y="70" width="120" height="60" fill="#22c55e"/>
+  <rect x="170" y="70" width="120" height="60" fill="#f59e0b"/>
+  <rect x="290" y="70" width="80" height="60" fill="#ef4444"/>
+
+  <text x="110" y="105" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#ffffff">S</text>
+  <text x="230" y="105" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#ffffff">A</text>
+  <text x="330" y="105" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#ffffff">P</text>
+
+  <text x="110" y="150" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#1e293b">Safe</text>
+  <text x="110" y="164" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#64748b">below 0.22 mg/l</text>
+
+  <text x="230" y="150" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#1e293b">Alarm</text>
+  <text x="230" y="164" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#64748b">0.22 - 0.35 mg/l</text>
+
+  <text x="330" y="150" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#1e293b">Positive</text>
+  <text x="330" y="164" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#64748b">0.35 mg/l or more</text>
+
+  <text x="210" y="200" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#64748b">"A" and "P" both require a follow-up breath analysis</text>
+  <text x="210" y="216" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#64748b">Refusing the test: 12h driving ban + 15-day license surrender</text>
+</svg>

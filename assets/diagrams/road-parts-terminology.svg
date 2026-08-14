@@ -1,0 +1,43 @@
+<svg viewBox="0 0 500 280" xmlns="http://www.w3.org/2000/svg">
+  <title>Parts of the public road</title>
+  <desc>Cross-section diagram labeling the parts of a public road: verge, cycle path, roadway divided into lanes by a center line, and the far verge/parking strip, with the whole cross-section bracketed as the public road.</desc>
+  <rect width="500" height="280" fill="#f8fafc"/>
+  <text x="250" y="24" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#1e293b">Parts of the public road</text>
+
+  <!-- Cross section bands, left to right -->
+  <rect x="30" y="90" width="40" height="90" fill="#86efac"/>  <!-- verge -->
+  <rect x="70" y="90" width="35" height="90" fill="#94a3b8"/>  <!-- cycle path -->
+  <rect x="105" y="90" width="290" height="90" fill="#475569"/> <!-- roadway -->
+  <rect x="395" y="90" width="35" height="90" fill="#94a3b8" opacity="0.6"/> <!-- parking strip -->
+  <rect x="430" y="90" width="40" height="90" fill="#86efac"/> <!-- verge -->
+
+  <!-- Lane divider (center line) -->
+  <line x1="250" y1="90" x2="250" y2="180" stroke="#f8fafc" stroke-width="3" stroke-dasharray="10 8"/>
+
+  <!-- Edge lines of roadway -->
+  <line x1="105" y1="90" x2="105" y2="180" stroke="#f8fafc" stroke-width="2"/>
+  <line x1="395" y1="90" x2="395" y2="180" stroke="#f8fafc" stroke-width="2"/>
+
+  <!-- Labels, staggered at two heights so neighbors never collide -->
+  <line x1="50" y1="90" x2="50" y2="65" stroke="#1e293b" stroke-width="1.5"/>
+  <text x="50" y="58" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#1e293b">Verge</text>
+
+  <line x1="87" y1="90" x2="87" y2="40" stroke="#1e293b" stroke-width="1.5"/>
+  <text x="87" y="33" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#1e293b">Cycle path</text>
+
+  <line x1="177" y1="90" x2="177" y2="65" stroke="#1e293b" stroke-width="1.5"/>
+  <text x="177" y="58" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#1e293b">Lane</text>
+
+  <line x1="412" y1="180" x2="412" y2="205" stroke="#1e293b" stroke-width="1.5"/>
+  <text x="412" y="223" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#1e293b">Parking</text>
+  <text x="412" y="236" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#1e293b">strip</text>
+
+  <line x1="450" y1="90" x2="450" y2="65" stroke="#1e293b" stroke-width="1.5"/>
+  <text x="450" y="58" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#1e293b">Verge</text>
+
+  <!-- Roadway bracket -->
+  <line x1="105" y1="252" x2="395" y2="252" stroke="#0284c7" stroke-width="2"/>
+  <line x1="105" y1="246" x2="105" y2="258" stroke="#0284c7" stroke-width="2"/>
+  <line x1="395" y1="246" x2="395" y2="258" stroke="#0284c7" stroke-width="2"/>
+  <text x="250" y="272" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#0284c7">Roadway</text>
+</svg>

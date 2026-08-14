@@ -1,0 +1,50 @@
+<svg viewBox="0 0 620 340" xmlns="http://www.w3.org/2000/svg">
+  <title>Priority from the right</title>
+  <desc>Top-down diagrams of an uncontrolled 4-way intersection and a T-junction, both showing priority-from-the-right: the vehicle coming from the right has priority regardless of which direction it intends to go. Vehicles are shown correctly positioned in their own lane, not straddling the center line.</desc>
+  <rect width="620" height="340" fill="#f8fafc"/>
+  <text x="310" y="24" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#1e293b">Priority from the right</text>
+
+  <!-- 4-way intersection -->
+  <g transform="translate(0,10)">
+    <rect x="0" y="130" width="280" height="80" fill="#64748b"/>
+    <rect x="100" y="50" width="80" height="240" fill="#64748b"/>
+    <line x1="0" y1="170" x2="280" y2="170" stroke="#f8fafc" stroke-width="2" stroke-dasharray="8 6"/>
+    <line x1="140" y1="50" x2="140" y2="290" stroke="#f8fafc" stroke-width="2" stroke-dasharray="8 6"/>
+
+    <!-- You, approaching from the south (moving north): right-hand lane = east side (x > 140) -->
+    <rect x="152" y="230" width="24" height="36" rx="5" fill="#ef4444"/>
+    <text x="164" y="300" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#991b1b">You: yield</text>
+
+    <!-- Vehicle from the east (moving west): right-hand lane = north side (y < 170) -->
+    <rect x="220" y="140" width="36" height="24" rx="5" fill="#22c55e"/>
+    <text x="238" y="130" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#166534">Priority</text>
+
+    <!-- Vehicle from the west (moving east): right-hand lane = south side (y > 170) -->
+    <rect x="24" y="176" width="36" height="24" rx="5" fill="#94a3b8"/>
+
+    <!-- Vehicle from the north (moving south): right-hand lane = west side (x < 140) -->
+    <rect x="104" y="64" width="24" height="36" rx="5" fill="#94a3b8"/>
+
+    <text x="140" y="315" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#1e293b">4-way crossroads</text>
+  </g>
+
+  <!-- T-junction -->
+  <g transform="translate(340,10)">
+    <rect x="0" y="130" width="280" height="80" fill="#64748b"/>
+    <rect x="100" y="130" width="80" height="160" fill="#64748b"/>
+    <line x1="0" y1="170" x2="280" y2="170" stroke="#f8fafc" stroke-width="2" stroke-dasharray="8 6"/>
+    <line x1="140" y1="170" x2="140" y2="290" stroke="#f8fafc" stroke-width="2" stroke-dasharray="8 6"/>
+
+    <!-- You, approaching from the south (moving north): right-hand lane = east side -->
+    <rect x="152" y="230" width="24" height="36" rx="5" fill="#ef4444"/>
+    <text x="164" y="300" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#991b1b">You: yield</text>
+
+    <!-- Vehicle from the east (moving west): right-hand lane = north side -->
+    <rect x="220" y="140" width="36" height="24" rx="5" fill="#22c55e"/>
+    <text x="238" y="130" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#166534">Priority</text>
+
+    <text x="140" y="315" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#1e293b">T-junction — same rule applies</text>
+  </g>
+
+  <text x="310" y="330" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#64748b">No signs, lights, or officer present — applies at crossroads, T- and Y-junctions alike</text>
+</svg>

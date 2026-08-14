@@ -1,0 +1,71 @@
+<svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg">
+  <title>Maneuvers that require yielding</title>
+  <desc>Top-down road scenes for six maneuvers where the driver must yield to other traffic: changing lanes, crossing the roadway, leaving a parking spot, entering or leaving a property, making a U-turn, and reversing.</desc>
+  <rect width="480" height="260" fill="#f8fafc"/>
+  <text x="240" y="24" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#1e293b">Maneuvers: you must yield</text>
+
+  <defs>
+    <marker id="ym2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#0284c7"/></marker>
+  </defs>
+
+  <g font-family="sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#1e293b">
+    <!-- 1. Lane change -->
+    <g transform="translate(15,45)">
+      <rect width="135" height="75" rx="6" fill="#e2e8f0"/>
+      <rect x="10" y="8" width="115" height="59" fill="#64748b"/>
+      <line x1="67" y1="8" x2="67" y2="67" stroke="#f8fafc" stroke-width="2" stroke-dasharray="6 5"/>
+      <rect x="40" y="45" width="14" height="20" rx="3" fill="#0284c7"/>
+      <path d="M 47,45 C 47,30 80,25 90,15" stroke="#0284c7" stroke-width="2.5" fill="none" marker-end="url(#ym2)"/>
+      <text x="67" y="90">Changing lanes</text>
+    </g>
+
+    <!-- 2. Crossing the road -->
+    <g transform="translate(172,45)">
+      <rect width="135" height="75" rx="6" fill="#e2e8f0"/>
+      <rect x="10" y="8" width="115" height="59" fill="#64748b"/>
+      <line x1="10" y1="37" x2="125" y2="37" stroke="#f8fafc" stroke-width="2" stroke-dasharray="6 5"/>
+      <rect x="20" y="50" width="20" height="12" rx="3" fill="#0284c7"/>
+      <path d="M 30,50 C 30,30 60,15 100,15" stroke="#0284c7" stroke-width="2.5" fill="none" marker-end="url(#ym2)"/>
+      <text x="67" y="90">Crossing the road</text>
+    </g>
+
+    <!-- 3. Leaving a parking spot -->
+    <g transform="translate(329,45)">
+      <rect width="135" height="75" rx="6" fill="#e2e8f0"/>
+      <rect x="10" y="30" width="115" height="37" fill="#64748b"/>
+      <rect x="45" y="8" width="30" height="22" fill="none" stroke="#94a3b8" stroke-width="2"/>
+      <rect x="50" y="12" width="20" height="14" rx="3" fill="#0284c7"/>
+      <path d="M 60,26 C 60,40 70,48 90,52" stroke="#0284c7" stroke-width="2.5" fill="none" marker-end="url(#ym2)"/>
+      <text x="67" y="90">Leaving a parking spot</text>
+    </g>
+
+    <!-- 4. Property entry/exit -->
+    <g transform="translate(15,150)">
+      <rect width="135" height="75" rx="6" fill="#e2e8f0"/>
+      <rect x="10" y="30" width="115" height="37" fill="#64748b"/>
+      <path d="M 90,8 L 120,8 L 100,30 L 90,30 Z" fill="#94a3b8"/>
+      <rect x="35" y="42" width="20" height="14" rx="3" fill="#0284c7"/>
+      <path d="M 45,42 C 55,25 75,15 95,12" stroke="#0284c7" stroke-width="2.5" fill="none" marker-end="url(#ym2)"/>
+      <text x="67" y="90">Property entry / exit</text>
+    </g>
+
+    <!-- 5. U-turn -->
+    <g transform="translate(172,150)">
+      <rect width="135" height="75" rx="6" fill="#e2e8f0"/>
+      <rect x="10" y="8" width="115" height="59" fill="#64748b"/>
+      <line x1="67" y1="8" x2="67" y2="67" stroke="#f8fafc" stroke-width="2" stroke-dasharray="6 5"/>
+      <rect x="88" y="45" width="14" height="20" rx="3" fill="#0284c7"/>
+      <path d="M 95,45 C 95,20 45,20 45,40 C 45,55 60,58 65,50" stroke="#0284c7" stroke-width="2.5" fill="none" marker-end="url(#ym2)"/>
+      <text x="67" y="90">Making a U-turn</text>
+    </g>
+
+    <!-- 6. Reversing -->
+    <g transform="translate(329,150)">
+      <rect width="135" height="75" rx="6" fill="#e2e8f0"/>
+      <rect x="10" y="8" width="115" height="59" fill="#64748b"/>
+      <rect x="75" y="27" width="20" height="14" rx="3" fill="#0284c7"/>
+      <path d="M 75,34 L 35,34" stroke="#0284c7" stroke-width="2.5" fill="none" marker-end="url(#ym2)"/>
+      <text x="67" y="90">Reversing</text>
+    </g>
+  </g>
+</svg>

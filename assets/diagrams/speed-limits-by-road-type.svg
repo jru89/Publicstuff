@@ -1,0 +1,26 @@
+<svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg">
+  <title>Speed limits by road type</title>
+  <desc>Bar chart comparing maximum speeds by road type: built-up area 50 km/h, regular road 70 km/h (Flanders) or 90 km/h (Wallonia), motorway 120 km/h.</desc>
+  <rect width="420" height="260" fill="#f8fafc"/>
+  <text x="210" y="24" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#1e293b">Speed limits by road type</text>
+
+  <line x1="50" y1="205" x2="390" y2="205" stroke="#1e293b" stroke-width="2"/>
+
+  <rect x="70" y="150" width="55" height="55" fill="#0284c7"/>
+  <text x="97" y="145" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#1e293b">50</text>
+  <text x="97" y="222" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#1e293b">Built-up area</text>
+
+  <rect x="155" y="120" width="55" height="85" fill="#0284c7"/>
+  <text x="182" y="115" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#1e293b">70/90</text>
+  <text x="182" y="222" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#1e293b">Regular road</text>
+
+  <rect x="240" y="80" width="55" height="125" fill="#0284c7"/>
+  <text x="267" y="75" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#1e293b">120</text>
+  <text x="267" y="222" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#1e293b">Motorway</text>
+
+  <rect x="325" y="150" width="55" height="55" fill="#94a3b8"/>
+  <text x="352" y="145" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#1e293b">30</text>
+  <text x="352" y="222" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#1e293b">Zone 30</text>
+
+  <text x="210" y="245" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#64748b">70 km/h in Flanders/Brussels, 90 km/h in Wallonia on regular roads</text>
+</svg>
