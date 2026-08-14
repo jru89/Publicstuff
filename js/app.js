@@ -38,11 +38,17 @@ function render() {
   } else if (path === "exam-setup") {
     renderExamSetup(app, navigate);
   } else if (path === "exam") {
-    activeCleanup = renderExam(app, QUESTIONS, examOptions, (result) => {
-      lastResult = result;
-      saveAttempt(result);
-      navigate("#/results");
-    });
+    activeCleanup = renderExam(
+      app,
+      QUESTIONS,
+      examOptions,
+      (result) => {
+        lastResult = result;
+        saveAttempt(result);
+        navigate("#/results");
+      },
+      () => navigate("#/")
+    );
   } else if (path === "results") {
     if (!lastResult) {
       navigate("#/");

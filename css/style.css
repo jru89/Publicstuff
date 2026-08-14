@@ -158,10 +158,39 @@ button {
 .lesson-body th { background: var(--surface); }
 
 /* ---- Exam ---- */
-.exam-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.exam-header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.exam-header-info { flex: 1; display: flex; justify-content: space-between; align-items: center; }
 .exam-progress { color: var(--text-dim); font-size: 0.9rem; }
 .exam-timer { font-weight: 700; font-size: 1.1rem; }
 .exam-timer.timer-urgent { color: var(--fail); }
+
+.exam-exit-btn {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--surface-2);
+  color: var(--text-dim);
+  font-size: 1.2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.exam-exit-btn:active { background: var(--surface-2); color: var(--text); }
+
+.exam-question-image {
+  display: block;
+  max-width: 220px;
+  margin: 8px auto 16px;
+  border-radius: 10px;
+  background: #f8fafc;
+  padding: 10px;
+}
+
+#confirm-btn { margin-top: 20px; }
+#confirm-btn:disabled { opacity: 0.4; }
 
 .timer-bar-track { height: 6px; background: var(--surface-2); border-radius: 4px; overflow: hidden; margin-bottom: 20px; }
 .timer-bar-fill { height: 100%; background: var(--accent); transition: width 1s linear; }

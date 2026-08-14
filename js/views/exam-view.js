@@ -9,10 +9,11 @@ const ADVANCE_DELAY_MS = 500;
  * `options.timerEnabled` (default true) turns the 15s countdown on/off.
  * `options.showLiveScore` (default false) shows a running score in the header.
  * Calls `onFinish(result)` once all questions are answered/timed out.
+ * Calls `onExit()` if the user confirms they want to quit mid-exam.
  * Returns a cleanup function the caller should invoke if navigating away
  * mid-exam (stops the running timer).
  */
-export function renderExam(container, questionBank, options, onFinish) {
+export function renderExam(container, questionBank, options, onFinish, onExit) {
   const timerEnabled = options?.timerEnabled ?? true;
   const showLiveScore = options?.showLiveScore ?? false;
 
@@ -22,6 +23,7 @@ export function renderExam(container, questionBank, options, onFinish) {
   let tickId = null;
   let advanceId = null;
   let locked = false;
+  let selectedIndex = null;
   const answers = [];
 
   function cleanup() {
@@ -36,6 +38,7 @@ export function renderExam(container, questionBank, options, onFinish) {
       return;
     }
     locked = false;
+    selectedIndex = null;
     const q = exam[index];
     renderQuestionUI(q);
 
@@ -60,19 +63,39 @@ export function renderExam(container, questionBank, options, onFinish) {
     locked = true;
     clearInterval(tickId);
     const q = exam[index];
-    answers.push({ question: q, chosenIndex: null, timedOut: true, correct: false });
-    markLocked(null, true);
+    // If an option was picked but not yet confirmed when time ran out,
+    // honor that pick rather than discarding it — the learner did decide,
+    // they just didn't click Confirm in time.
+    if (selectedIndex !== null) {
+      const isCorrect = selectedIndex === q.correct;
+      answers.push({ question: q, chosenIndex: selectedIndex, timedOut: false, correct: isCorrect });
+      markLocked(selectedIndex, false);
+    } else {
+      answers.push({ question: q, chosenIndex: null, timedOut: true, correct: false });
+      markLocked(null, true);
+    }
     advanceId = setTimeout(next, ADVANCE_DELAY_MS);
   }
 
-  function handleAnswer(chosenIndex) {
+  function handlePick(chosenIndex) {
     if (locked) return;
+    selectedIndex = chosenIndex;
+    const optionsEl = container.querySelector("#exam-options");
+    optionsEl.querySelectorAll(".option-btn").forEach((btn) => {
+      btn.classList.toggle("option-selected", Number(btn.dataset.index) === chosenIndex);
+    });
+    const confirmBtn = container.querySelector("#confirm-btn");
+    if (confirmBtn) confirmBtn.disabled = false;
+  }
+
+  function handleConfirm() {
+    if (locked || selectedIndex === null) return;
     locked = true;
     clearInterval(tickId);
     const q = exam[index];
-    const isCorrect = chosenIndex === q.correct;
-    answers.push({ question: q, chosenIndex, timedOut: false, correct: isCorrect });
-    markLocked(chosenIndex, false);
+    const isCorrect = selectedIndex === q.correct;
+    answers.push({ question: q, chosenIndex: selectedIndex, timedOut: false, correct: isCorrect });
+    markLocked(selectedIndex, false);
     advanceId = setTimeout(next, ADVANCE_DELAY_MS);
   }
 
@@ -87,24 +110,39 @@ export function renderExam(container, questionBank, options, onFinish) {
     onFinish({ score, total, passed: score >= PASS_SCORE, answers });
   }
 
+  function handleExit() {
+    const confirmed = window.confirm("Quit this exam? Your progress on this attempt will be lost.");
+    if (confirmed && onExit) {
+      cleanup();
+      onExit();
+    }
+  }
+
   function renderQuestionUI(q) {
     const scoreSoFar = answers.filter((a) => a.correct).length;
     container.innerHTML = `
       <div class="exam-header">
-        <div class="exam-progress">Question ${index + 1} / ${exam.length}</div>
-        ${showLiveScore ? `<div class="exam-live-score">Score: ${scoreSoFar}/${answers.length}</div>` : ""}
-        ${timerEnabled ? `<div class="exam-timer" id="exam-timer">${QUESTION_SECONDS}s</div>` : ""}
+        <button class="exam-exit-btn" id="exam-exit-btn" aria-label="Quit exam">&times;</button>
+        <div class="exam-header-info">
+          <div class="exam-progress">Question ${index + 1} / ${exam.length}</div>
+          ${showLiveScore ? `<div class="exam-live-score">Score: ${scoreSoFar}/${answers.length}</div>` : ""}
+          ${timerEnabled ? `<div class="exam-timer" id="exam-timer">${QUESTION_SECONDS}s</div>` : ""}
+        </div>
       </div>
       ${timerEnabled ? `<div class="timer-bar-track"><div class="timer-bar-fill" id="timer-bar" style="width:100%"></div></div>` : ""}
+      ${q.image ? `<img class="exam-question-image" src="${q.image}" alt="" />` : ""}
       <h2 class="exam-question">${q.q}</h2>
       <div class="exam-options" id="exam-options">
         ${q.options.map((opt, i) => `<button class="option-btn" data-index="${i}">${opt}</button>`).join("")}
       </div>
+      <button class="btn-primary btn-large" id="confirm-btn" disabled>Confirm answer</button>
     `;
+    container.querySelector("#exam-exit-btn").addEventListener("click", handleExit);
     const optionsEl = container.querySelector("#exam-options");
     optionsEl.querySelectorAll(".option-btn").forEach((btn) => {
-      btn.addEventListener("click", () => handleAnswer(Number(btn.dataset.index)));
+      btn.addEventListener("click", () => handlePick(Number(btn.dataset.index)));
     });
+    container.querySelector("#confirm-btn").addEventListener("click", handleConfirm);
   }
 
   function updateTimer() {
@@ -121,8 +159,10 @@ export function renderExam(container, questionBank, options, onFinish) {
     if (!optionsEl) return;
     optionsEl.querySelectorAll(".option-btn").forEach((btn) => {
       btn.disabled = true;
-      if (Number(btn.dataset.index) === chosenIndex) btn.classList.add("option-selected");
+      btn.classList.toggle("option-selected", Number(btn.dataset.index) === chosenIndex);
     });
+    const confirmBtn = container.querySelector("#confirm-btn");
+    if (confirmBtn) confirmBtn.disabled = true;
     const timerEl = container.querySelector("#exam-timer");
     if (timerEl && timedOut) timerEl.textContent = "Time's up";
   }

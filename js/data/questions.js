@@ -281,4 +281,51 @@ export const QUESTIONS = [
   { id: "q31-4", lessonId: 31, category: "H", q: "For how long can a (provisional) license be immediately confiscated for a serious violation?", options: ["5 days", "15 days, extendable to 30", "1 year", "It's permanent"], correct: 1, exp: "Immediate confiscation is for 15 days, extendable to 30 for serious cases." },
   // q31-5 removed: it quizzed on study strategy ("practice B-license questions
   // too"), not an actual traffic rule — same class of bug as the lesson 1 fix.
+
+  // ============ SIGN RECOGNITION (image-based) ============
+  // "What does this sign mean?" questions using the official sign icons
+  // already in assets/signs/. Priority signs are tagged category F to keep
+  // them inside the intentional Right-of-Way overweighting; the rest are
+  // tagged to whichever lesson/category they're most relevant to.
+
+  // ---- Priority signs (lesson 19, category F) ----
+  { id: "qs-b1", lessonId: 19, category: "F", q: "What does this sign mean?", image: "assets/signs/priority/B1.png", options: ["Priority road", "Yield right of way", "Stop and yield", "Priority from the right"], correct: 1, exp: "B1: yield right of way." },
+  { id: "qs-b5", lessonId: 19, category: "F", q: "What does this sign mean?", image: "assets/signs/priority/B5.png", options: ["Yield right of way", "Priority road", "Stop and yield right of way", "End of priority road"], correct: 2, exp: "B5: you must come to a complete stop and yield." },
+  { id: "qs-b9", lessonId: 19, category: "F", q: "What does this sign mean?", image: "assets/signs/priority/B9.png", options: ["Priority road", "Stop sign", "Roundabout ahead", "Priority at next intersection only"], correct: 0, exp: "B9: you're on a priority road with right of way at upcoming intersections." },
+  { id: "qs-b17", lessonId: 20, category: "F", q: "What does this sign mean?", image: "assets/signs/priority/B17.png", options: ["Priority road", "Priority from the right", "Yield", "End of priority road"], correct: 1, exp: "B17: reminds you that priority-from-the-right applies here." },
+  { id: "qs-b19", lessonId: 14, category: "F", q: "What does this sign mean, at a narrow passage?", image: "assets/signs/priority/B19.png", options: ["You have priority", "You must yield to oncoming drivers", "No entry", "Priority road"], correct: 1, exp: "B19 (red): yield to oncoming drivers at a narrow passage." },
+  { id: "qs-b21", lessonId: 14, category: "F", q: "What does this sign mean, at a narrow passage?", image: "assets/signs/priority/B21.png", options: ["You must yield", "You have priority over oncoming drivers", "No entry", "Stop"], correct: 1, exp: "B21 (blue): you have priority over oncoming drivers at a narrow passage." },
+  { id: "qs-d5", lessonId: 19, category: "F", q: "What does this sign mean?", image: "assets/signs/mandatory/D5.png", options: ["Priority road", "Mandatory roundabout", "No entry", "Yield"], correct: 1, exp: "D5: mandatory roundabout — traffic must go around it." },
+
+  // ---- Danger signs ----
+  { id: "qs-a25", lessonId: 9, category: "C", q: "What does this sign warn you about?", image: "assets/signs/danger/A25.png", options: ["Pedestrian crossing ahead", "Cyclist crossing ahead", "Roadworks ahead", "Slippery road"], correct: 1, exp: "A25: cyclist crossing ahead." },
+  { id: "qs-a21", lessonId: 11, category: "D", q: "What does this sign warn you about?", image: "assets/signs/danger/A21.png", options: ["Cyclist crossing ahead", "Pedestrian crossing ahead", "School zone", "Roadworks ahead"], correct: 1, exp: "A21: pedestrian crossing ahead." },
+  { id: "qs-a45", lessonId: 22, category: "F", q: "What does this sign warn you about?", image: "assets/signs/danger/A45.png", options: ["Level crossing, two or more tracks", "Level crossing, single track", "Tram stop ahead", "Bridge ahead"], correct: 1, exp: "A45: level crossing with a single track." },
+  { id: "qs-a47", lessonId: 22, category: "F", q: "What does this sign warn you about?", image: "assets/signs/danger/A47.png", options: ["Level crossing, single track", "Level crossing, two or more tracks", "Tram stop ahead", "Roadworks ahead"], correct: 1, exp: "A47: level crossing with two or more tracks." },
+  { id: "qs-a31", lessonId: 8, category: "C", q: "What does this sign warn you about?", image: "assets/signs/danger/A31.png", options: ["Roadworks ahead", "Slippery road", "Falling rocks", "Road narrows"], correct: 0, exp: "A31: roadworks ahead." },
+  { id: "qs-a14", lessonId: 16, category: "E", q: "What does this sign warn you about?", image: "assets/signs/danger/A14.png", options: ["Steep incline", "Raised/table crossing ahead", "Uneven road surface", "Slippery road"], correct: 1, exp: "A14: a raised/table crossing is ahead." },
+  { id: "qs-a7a", lessonId: 14, category: "E", q: "What does this sign warn you about?", image: "assets/signs/danger/A7a.png", options: ["Road narrows", "Roadworks ahead", "Dangerous bend", "Slippery road"], correct: 0, exp: "A7a: the road narrows ahead." },
+  { id: "qs-a15", lessonId: 25, category: "G", q: "What does this sign warn you about?", image: "assets/signs/danger/A15.png", options: ["Loose gravel", "Slippery road", "Falling rocks", "Steep descent"], correct: 1, exp: "A15: slippery road surface ahead." },
+
+  // ---- Prohibition signs ----
+  { id: "qs-c3", lessonId: 24, category: "G", q: "What does this sign mean?", image: "assets/signs/prohibition/C3.png", options: ["No entry in this direction only", "No entry in either direction for any driver", "No parking", "No overtaking"], correct: 1, exp: "C3: no entry in either direction, for any driver." },
+  { id: "qs-c35", lessonId: 16, category: "E", q: "What does this sign mean?", image: "assets/signs/prohibition/C35.png", options: ["No overtaking of towed combinations/multi-wheeled vehicles until the next intersection", "No entry", "No parking", "Speed limit"], correct: 0, exp: "C35: no overtaking a towed combination or vehicle with more than two wheels until the next intersection." },
+  { id: "qs-c43", lessonId: 23, category: "G", q: "What does this sign mean?", image: "assets/signs/prohibition/C43.png", options: ["Minimum speed required", "Maximum speed shown, until the next intersection", "End of speed limit", "Recommended speed"], correct: 1, exp: "C43: no driving faster than the speed shown, until the next intersection." },
+  { id: "qs-c11", lessonId: 9, category: "C", q: "What does this sign mean?", image: "assets/signs/prohibition/C11.png", options: ["No entry for pedestrians", "No entry for cyclists", "No entry for mopeds", "Mandatory cycle path"], correct: 1, exp: "C11: no entry for cyclists." },
+
+  // ---- Mandatory signs ----
+  { id: "qs-d9", lessonId: 9, category: "C", q: "What does this sign mean?", image: "assets/signs/mandatory/D9.png", options: ["Mandatory cycle path (all cyclists/mopeds)", "Part of the road reserved for pedestrians, cyclists, and class-A mopeds", "Pedestrian-only zone", "Suggested cycle lane"], correct: 1, exp: "D9: part of the road reserved for pedestrians, cyclists, and class-A two-wheeled mopeds." },
+  { id: "qs-d1", lessonId: 27, category: "G", q: "What does this sign mean?", image: "assets/signs/mandatory/D1.png", options: ["Recommended direction", "You must follow the direction shown by the arrow", "One-way street", "No turning"], correct: 1, exp: "D1: you must follow the direction shown by the arrow." },
+
+  // ---- Parking signs ----
+  { id: "qs-e1", lessonId: 26, category: "G", q: "What does this sign mean?", image: "assets/signs/parking/E1.png", options: ["No stopping or parking", "No parking", "Parking allowed", "No entry"], correct: 1, exp: "E1: no parking (stopping briefly is still allowed)." },
+  { id: "qs-e3", lessonId: 26, category: "G", q: "What does this sign mean?", image: "assets/signs/parking/E3.png", options: ["No parking", "No stopping or parking", "Parking allowed", "Loading zone only"], correct: 1, exp: "E3: no stopping or parking at all." },
+  { id: "qs-e9i", lessonId: 26, category: "G", q: "What does this sign mean?", image: "assets/signs/parking/E9i.png", options: ["Parking only for motorcycles", "No parking for motorcycles", "Parking only for cars", "Parking only for coaches"], correct: 0, exp: "E9i: parking reserved exclusively for motorcycles." },
+
+  // ---- Indication signs ----
+  { id: "qs-f1", lessonId: 10, category: "C", q: "What does this sign mean?", image: "assets/signs/indication/F1.png", options: ["End of a built-up area", "Start of a built-up area", "Start of a zone", "Town center"], correct: 1, exp: "F1: start of a built-up area." },
+  { id: "qs-f5", lessonId: 23, category: "G", q: "What does this sign mean?", image: "assets/signs/indication/F5.png", options: ["Start of motorway", "End of motorway", "Start of expressway", "Speed limit begins"], correct: 0, exp: "F5: start of a motorway." },
+  { id: "qs-f19", lessonId: 14, category: "E", q: "What does this sign mean?", image: "assets/signs/indication/F19.png", options: ["Two-way road", "One-way public road", "Dead-end road", "No entry"], correct: 1, exp: "F19: this is a one-way public road." },
+  { id: "qs-f45", lessonId: 14, category: "E", q: "What does this sign mean?", image: "assets/signs/indication/F45.png", options: ["One-way road", "Dead-end road", "No through traffic for trucks", "Road closed"], correct: 1, exp: "F45: dead-end road." },
+  { id: "qs-f12a", lessonId: 10, category: "C", q: "What does this sign mean?", image: "assets/signs/indication/F12a.png", options: ["Start of a residential home zone", "End of a residential home zone", "Start of a play street", "Speed bump ahead"], correct: 0, exp: "F12a: start of a residential home zone." },
 ];
