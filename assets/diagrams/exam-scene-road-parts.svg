@@ -1,0 +1,11 @@
+<svg viewBox="0 0 340 200" xmlns="http://www.w3.org/2000/svg">
+  <title>Cross-section of a public road</title>
+  <desc>A cross-section of a road showing, from left to right: a sidewalk, a verge, a cycle path, and the paved carriageway, with no labels.</desc>
+  <rect width="340" height="200" fill="#f8fafc"/>
+
+  <rect x="0" y="60" width="60" height="140" fill="#cbd5e1"/>
+  <rect x="60" y="60" width="40" height="140" fill="#86a06a"/>
+  <rect x="100" y="60" width="60" height="140" fill="#7c5a1e"/>
+  <rect x="160" y="60" width="180" height="140" fill="#64748b"/>
+  <line x1="250" y1="60" x2="250" y2="200" stroke="#f8fafc" stroke-width="3" stroke-dasharray="14 10"/>
+</svg>

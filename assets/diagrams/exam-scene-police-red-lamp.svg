@@ -1,0 +1,17 @@
+<svg viewBox="0 0 220 260" xmlns="http://www.w3.org/2000/svg">
+  <title>Officer directing traffic with a red lamp</title>
+  <desc>An authorized person directing traffic at night, holding a red lamp out to the side, waving it.</desc>
+  <rect width="220" height="260" fill="#f8fafc"/>
+
+  <line x1="110" y1="98" x2="160" y2="120" stroke="#1e293b" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="168" cy="124" r="10" fill="#ef4444"/>
+
+  <circle cx="110" cy="70" r="18" fill="#1e293b"/>
+  <rect x="90" y="88" width="40" height="70" rx="10" fill="#1e293b"/>
+  <line x1="98" y1="98" x2="86" y2="150" stroke="#1e293b" stroke-width="10" stroke-linecap="round"/>
+
+  <line x1="102" y1="156" x2="96" y2="220" stroke="#1e293b" stroke-width="11" stroke-linecap="round"/>
+  <line x1="118" y1="156" x2="124" y2="220" stroke="#1e293b" stroke-width="11" stroke-linecap="round"/>
+
+  <line x1="50" y1="222" x2="170" y2="222" stroke="#cbd5e1" stroke-width="3"/>
+</svg>

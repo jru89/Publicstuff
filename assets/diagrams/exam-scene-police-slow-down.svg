@@ -1,0 +1,17 @@
+<svg viewBox="0 0 220 260" xmlns="http://www.w3.org/2000/svg">
+  <title>Officer directing traffic, arm moving up and down</title>
+  <desc>An authorized person directing traffic with one arm held out at a downward angle, small motion arcs showing it moving up and down.</desc>
+  <rect width="220" height="260" fill="#f8fafc"/>
+
+  <line x1="110" y1="98" x2="160" y2="130" stroke="#1e293b" stroke-width="10" stroke-linecap="round"/>
+  <path d="M 150,100 A 30,30 0 0 1 150,150" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 7"/>
+
+  <circle cx="110" cy="70" r="18" fill="#1e293b"/>
+  <rect x="90" y="88" width="40" height="70" rx="10" fill="#1e293b"/>
+  <line x1="98" y1="98" x2="86" y2="150" stroke="#1e293b" stroke-width="10" stroke-linecap="round"/>
+
+  <line x1="102" y1="156" x2="96" y2="220" stroke="#1e293b" stroke-width="11" stroke-linecap="round"/>
+  <line x1="118" y1="156" x2="124" y2="220" stroke="#1e293b" stroke-width="11" stroke-linecap="round"/>
+
+  <line x1="50" y1="222" x2="170" y2="222" stroke="#cbd5e1" stroke-width="3"/>
+</svg>

@@ -1,0 +1,20 @@
+<svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+  <title>Motorcycle tire tread</title>
+  <desc>A close-up side view of a motorcycle tire showing its tread pattern, with no measurements or numbers.</desc>
+  <rect width="220" height="220" fill="#f8fafc"/>
+
+  <circle cx="110" cy="110" r="90" fill="#1e293b"/>
+  <circle cx="110" cy="110" r="55" fill="#f8fafc"/>
+  <circle cx="110" cy="110" r="18" fill="#1e293b"/>
+
+  <g stroke="#f8fafc" stroke-width="6" stroke-linecap="round">
+    <line x1="110" y1="20" x2="110" y2="45"/>
+    <line x1="110" y1="175" x2="110" y2="200"/>
+    <line x1="20" y1="110" x2="45" y2="110"/>
+    <line x1="175" y1="110" x2="200" y2="110"/>
+    <line x1="46" y1="46" x2="63" y2="63"/>
+    <line x1="157" y1="157" x2="174" y2="174"/>
+    <line x1="174" y1="46" x2="157" y2="63"/>
+    <line x1="63" y1="157" x2="46" y2="174"/>
+  </g>
+</svg>

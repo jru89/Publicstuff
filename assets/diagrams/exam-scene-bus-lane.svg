@@ -1,0 +1,20 @@
+<svg viewBox="0 0 260 300" xmlns="http://www.w3.org/2000/svg">
+  <title>Motorcycle near a bus lane, approaching an intersection</title>
+  <desc>Top-down view of a road with a marked bus lane on the right, a motorcycle in the regular lane near the final stretch before an intersection, intending to turn right.</desc>
+  <rect width="260" height="300" fill="#f8fafc"/>
+
+  <rect x="20" y="0" width="220" height="300" fill="#64748b"/>
+  <rect x="190" y="0" width="50" height="300" fill="#7c5a1e"/>
+  <line x1="190" y1="0" x2="190" y2="300" stroke="#f8fafc" stroke-width="3" stroke-dasharray="14 10"/>
+  <line x1="130" y1="0" x2="130" y2="180" stroke="#f8fafc" stroke-width="3" stroke-dasharray="14 10"/>
+
+  <!-- cross street ahead, indicating the intersection -->
+  <rect x="20" y="200" width="220" height="60" fill="#64748b"/>
+
+  <!-- motorcycle, in the regular lane, near the intersection -->
+  <g transform="translate(160,220)">
+    <circle cx="0" cy="-24" r="9" fill="#2563eb"/>
+    <circle cx="0" cy="24" r="9" fill="#2563eb"/>
+    <rect x="-6" y="-20" width="12" height="40" rx="5" fill="#2563eb"/>
+  </g>
+</svg>

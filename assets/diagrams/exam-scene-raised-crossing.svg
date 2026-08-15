@@ -1,0 +1,18 @@
+<svg viewBox="0 0 260 220" xmlns="http://www.w3.org/2000/svg">
+  <title>Vehicle approaching a raised crossing</title>
+  <desc>Top-down view of a road with a raised table crossing (shown as a slightly different-colored strip across the road), a car ahead slowing down, and a motorcycle behind it.</desc>
+  <rect width="260" height="220" fill="#f8fafc"/>
+
+  <rect x="0" y="60" width="260" height="100" fill="#64748b"/>
+  <rect x="100" y="60" width="40" height="100" fill="#94a3b8"/>
+
+  <!-- car, ahead, on the raised crossing -->
+  <rect x="105" y="94" width="34" height="30" rx="6" fill="#f1f5f9" stroke="#334155" stroke-width="2"/>
+
+  <!-- motorcycle, behind, same lane -->
+  <g transform="translate(45,110)">
+    <circle cx="0" cy="-20" r="8" fill="#2563eb"/>
+    <circle cx="0" cy="20" r="8" fill="#2563eb"/>
+    <rect x="-5" y="-16" width="10" height="32" rx="4" fill="#2563eb"/>
+  </g>
+</svg>

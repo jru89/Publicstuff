@@ -1,0 +1,11 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <title>Car parked on a cycle path</title>
+  <desc>Top-down view of a road with a distinctly surfaced cycle path alongside it, and a car parked on the cycle path.</desc>
+  <rect width="300" height="200" fill="#f8fafc"/>
+
+  <rect x="0" y="60" width="300" height="100" fill="#64748b"/>
+  <rect x="0" y="60" width="300" height="30" fill="#7c5a1e"/>
+
+  <!-- car, parked on the cycle path -->
+  <rect x="120" y="62" width="60" height="26" rx="6" fill="#f1f5f9" stroke="#334155" stroke-width="2"/>
+</svg>

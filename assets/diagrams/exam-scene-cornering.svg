@@ -1,0 +1,15 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <title>Motorcycle approaching a right-hand bend</title>
+  <desc>Top-down view of a road curving to the right, with a motorcycle positioned close to the centerline before entering the bend.</desc>
+  <rect width="300" height="300" fill="#f8fafc"/>
+
+  <path d="M 70,300 L 70,180 Q 70,70 180,70 L 300,70" fill="none" stroke="#64748b" stroke-width="90" stroke-linecap="butt"/>
+  <path d="M 70,300 L 70,180 Q 70,70 180,70 L 300,70" fill="none" stroke="#f8fafc" stroke-width="3" stroke-dasharray="16 12"/>
+
+  <!-- motorcycle, positioned close to the inside of the bend before entering it -->
+  <g transform="translate(100,220)">
+    <circle cx="-10" cy="-10" r="9" fill="#2563eb"/>
+    <circle cx="10" cy="10" r="9" fill="#2563eb"/>
+    <rect x="-6" y="-6" width="12" height="32" rx="5" fill="#2563eb" transform="rotate(-45)"/>
+  </g>
+</svg>

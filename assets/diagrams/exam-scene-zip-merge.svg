@@ -1,0 +1,14 @@
+<svg viewBox="0 0 260 320" xmlns="http://www.w3.org/2000/svg">
+  <title>Two lanes merging into one</title>
+  <desc>Top-down view of two lanes narrowing into one, with vehicles from each lane positioned alternately as they approach the merge point.</desc>
+  <rect width="260" height="320" fill="#f8fafc"/>
+
+  <path d="M 20,320 L 20,140 Q 20,80 90,60 L 130,40 L 170,60 Q 240,80 240,140 L 240,320 Z" fill="#64748b"/>
+  <line x1="130" y1="320" x2="130" y2="150" stroke="#f8fafc" stroke-width="3" stroke-dasharray="14 10"/>
+
+  <!-- left-lane vehicle, closer to the merge point -->
+  <rect x="60" y="150" width="34" height="60" rx="7" fill="#2563eb" transform="rotate(-8 77 180)"/>
+
+  <!-- right-lane vehicle, further back -->
+  <rect x="166" y="220" width="34" height="60" rx="7" fill="#f59e0b" transform="rotate(8 183 250)"/>
+</svg>

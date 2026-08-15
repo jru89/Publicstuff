@@ -24,11 +24,26 @@ export function renderExam(container, questionBank, options, onFinish, onExit) {
   let advanceId = null;
   let locked = false;
   let selectedIndex = null;
+  let pausedRemainingMs = null;
+  let pendingAdvanceOnCancel = false;
   const answers = [];
 
   function cleanup() {
     if (tickId) clearInterval(tickId);
     if (advanceId) clearTimeout(advanceId);
+  }
+
+  // Ticks every 250ms and recomputes remaining time from the wall-clock
+  // deadline (not a decrementing counter), so throttled/backgrounded
+  // tabs still enforce the real 15-second limit instead of drifting.
+  function startTicking() {
+    tickId = setInterval(() => {
+      if (Date.now() >= deadline) {
+        handleTimeout();
+      } else {
+        updateTimer();
+      }
+    }, 250);
   }
 
   function showQuestion() {
@@ -45,16 +60,7 @@ export function renderExam(container, questionBank, options, onFinish, onExit) {
     if (timerEnabled) {
       deadline = Date.now() + QUESTION_SECONDS * 1000;
       updateTimer();
-      // Ticks every 250ms and recomputes remaining time from the wall-clock
-      // deadline (not a decrementing counter), so throttled/backgrounded
-      // tabs still enforce the real 15-second limit instead of drifting.
-      tickId = setInterval(() => {
-        if (Date.now() >= deadline) {
-          handleTimeout();
-        } else {
-          updateTimer();
-        }
-      }, 250);
+      startTicking();
     }
   }
 
@@ -110,11 +116,61 @@ export function renderExam(container, questionBank, options, onFinish, onExit) {
     onFinish({ score, total, passed: score >= PASS_SCORE, answers });
   }
 
+  // Uses a custom in-app modal instead of window.confirm(): native
+  // confirm() dialogs are unreliable and can appear to hang for many
+  // seconds inside an iOS "Add to Home Screen" standalone PWA, since
+  // there's no Safari chrome to host them.
   function handleExit() {
-    const confirmed = window.confirm("Quit this exam? Your progress on this attempt will be lost.");
-    if (confirmed && onExit) {
+    if (tickId) {
+      clearInterval(tickId);
+      tickId = null;
+    }
+    pausedRemainingMs = timerEnabled && !locked ? Math.max(deadline - Date.now(), 0) : null;
+    if (advanceId) {
+      clearTimeout(advanceId);
+      advanceId = null;
+      pendingAdvanceOnCancel = true;
+    } else {
+      pendingAdvanceOnCancel = false;
+    }
+    showExitConfirm();
+  }
+
+  function showExitConfirm() {
+    const overlay = document.createElement("div");
+    overlay.className = "exit-confirm-overlay";
+    overlay.innerHTML = `
+      <div class="exit-confirm-box">
+        <p class="exit-confirm-text">Quit this exam? Your progress on this attempt will be lost.</p>
+        <div class="exit-confirm-actions">
+          <button class="btn-secondary btn-large" id="exit-cancel-btn">Keep going</button>
+          <button class="btn-primary btn-large exit-confirm-quit" id="exit-quit-btn">Quit exam</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+    overlay.querySelector("#exit-cancel-btn").addEventListener("click", () => {
+      overlay.remove();
+      resumeAfterExitCancel();
+    });
+    overlay.querySelector("#exit-quit-btn").addEventListener("click", () => {
+      overlay.remove();
       cleanup();
-      onExit();
+      if (onExit) onExit();
+    });
+  }
+
+  function resumeAfterExitCancel() {
+    if (pendingAdvanceOnCancel) {
+      pendingAdvanceOnCancel = false;
+      next();
+      return;
+    }
+    if (pausedRemainingMs !== null) {
+      deadline = Date.now() + pausedRemainingMs;
+      pausedRemainingMs = null;
+      updateTimer();
+      startTicking();
     }
   }
 

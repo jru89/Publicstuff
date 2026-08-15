@@ -1,0 +1,20 @@
+<svg viewBox="0 0 220 240" xmlns="http://www.w3.org/2000/svg">
+  <title>Rider holding a phone while riding</title>
+  <desc>A motorcycle rider, moving, holding a phone up to their helmet with one hand while the other hand stays on the handlebar.</desc>
+  <rect width="220" height="240" fill="#f8fafc"/>
+  <line x1="10" y1="196" x2="210" y2="196" stroke="#cbd5e1" stroke-width="3"/>
+
+  <circle cx="60" cy="180" r="20" fill="#1e293b"/>
+  <circle cx="170" cy="180" r="20" fill="#1e293b"/>
+  <path d="M 60,180 L 88,130 L 148,126 L 170,180" fill="none" stroke="#1e293b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="108" y="116" width="34" height="14" rx="6" fill="#1e293b"/>
+
+  <!-- rider -->
+  <circle cx="122" cy="82" r="13" fill="#2563eb"/>
+  <path d="M 122,95 L 128,124" stroke="#2563eb" stroke-width="9" stroke-linecap="round"/>
+  <path d="M 122,99 L 100,120" stroke="#2563eb" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- arm holding phone up to the helmet -->
+  <path d="M 122,99 L 108,80" stroke="#2563eb" stroke-width="8" stroke-linecap="round"/>
+  <rect x="90" y="68" width="14" height="22" rx="3" fill="#334155"/>
+</svg>

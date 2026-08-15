@@ -1,0 +1,20 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <title>Motorcycle parked at a right angle to the road</title>
+  <desc>Top-down view of a row of marked parking bays perpendicular to the road, with a motorcycle parked nose-in within one of the bays.</desc>
+  <rect width="300" height="200" fill="#f8fafc"/>
+
+  <rect x="0" y="0" width="300" height="60" fill="#64748b"/>
+  <g stroke="#94a3b8" stroke-width="2" fill="none">
+    <line x1="40" y1="60" x2="40" y2="180"/>
+    <line x1="90" y1="60" x2="90" y2="180"/>
+    <line x1="140" y1="60" x2="140" y2="180"/>
+    <line x1="190" y1="60" x2="190" y2="180"/>
+  </g>
+
+  <!-- motorcycle, parked nose-in within one bay, perpendicular to the road -->
+  <g transform="translate(115,120)">
+    <circle cx="-16" cy="0" r="8" fill="#2563eb"/>
+    <circle cx="16" cy="0" r="8" fill="#2563eb"/>
+    <rect x="-20" y="-5" width="40" height="10" rx="4" fill="#2563eb"/>
+  </g>
+</svg>

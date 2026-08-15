@@ -13,6 +13,7 @@ export function renderLessons(container, params, navigate) {
 
 function renderCategoryList(container, navigate) {
   container.innerHTML = `
+    <button class="back-link" id="back-btn">&larr; Home</button>
     <h2 class="section-title">Lesson Reference</h2>
     <div class="category-list">
       ${CATEGORIES.map(
@@ -25,6 +26,7 @@ function renderCategoryList(container, navigate) {
       ).join("")}
     </div>
   `;
+  container.querySelector("#back-btn").addEventListener("click", () => navigate("#/"));
   container.querySelectorAll(".category-card").forEach((btn) => {
     btn.addEventListener("click", () => navigate(`#/lessons/${btn.dataset.cat}`));
   });

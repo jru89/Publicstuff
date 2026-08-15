@@ -1,0 +1,25 @@
+<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+  <title>Loaded motorcycle</title>
+  <desc>Side view of a motorcycle with a rider and a rear-mounted box carrying luggage, viewed from the side.</desc>
+  <rect width="320" height="220" fill="#f8fafc"/>
+  <line x1="20" y1="176" x2="300" y2="176" stroke="#cbd5e1" stroke-width="3"/>
+
+  <!-- wheels -->
+  <circle cx="110" cy="160" r="20" fill="#1e293b"/>
+  <circle cx="230" cy="160" r="20" fill="#1e293b"/>
+  <circle cx="110" cy="160" r="7" fill="#f8fafc"/>
+  <circle cx="230" cy="160" r="7" fill="#f8fafc"/>
+
+  <!-- body / frame -->
+  <path d="M 110,160 L 150,110 L 210,108 L 230,160" fill="none" stroke="#1e293b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="140" y="96" width="40" height="16" rx="6" fill="#1e293b"/>
+
+  <!-- rider -->
+  <circle cx="176" cy="66" r="14" fill="#2563eb"/>
+  <path d="M 176,80 L 168,116" stroke="#2563eb" stroke-width="10" stroke-linecap="round"/>
+  <path d="M 176,84 L 202,104" stroke="#2563eb" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- rear box with luggage overhang -->
+  <rect x="234" y="118" width="46" height="42" rx="6" fill="#f59e0b"/>
+  <rect x="270" y="126" width="20" height="26" rx="4" fill="#fbbf24"/>
+</svg>

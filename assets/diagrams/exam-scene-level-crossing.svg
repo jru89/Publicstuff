@@ -1,0 +1,32 @@
+<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+  <title>Level crossing with barriers down</title>
+  <desc>A level crossing with striped barrier arms lowered across the road and flashing red lights lit on either side.</desc>
+  <rect width="320" height="220" fill="#f8fafc"/>
+
+  <rect x="0" y="70" width="320" height="80" fill="#64748b"/>
+  <g stroke="#f8fafc" stroke-width="6">
+    <line x1="140" y1="70" x2="140" y2="150"/>
+    <line x1="180" y1="70" x2="180" y2="150"/>
+  </g>
+
+  <!-- barrier posts and lights -->
+  <rect x="60" y="40" width="8" height="120" fill="#1e293b"/>
+  <rect x="252" y="40" width="8" height="120" fill="#1e293b"/>
+  <circle cx="64" cy="50" r="8" fill="#ef4444"/>
+  <circle cx="256" cy="50" r="8" fill="#ef4444"/>
+
+  <!-- lowered striped barrier arms, meeting near the center -->
+  <rect x="64" y="94" width="105" height="10" rx="4" fill="#ef4444"/>
+  <rect x="64" y="94" width="105" height="10" fill="none"/>
+  <g fill="#f8fafc">
+    <rect x="80" y="94" width="14" height="10"/>
+    <rect x="112" y="94" width="14" height="10"/>
+    <rect x="144" y="94" width="14" height="10"/>
+  </g>
+  <rect x="151" y="106" width="105" height="10" rx="4" fill="#ef4444"/>
+  <g fill="#f8fafc">
+    <rect x="167" y="106" width="14" height="10"/>
+    <rect x="199" y="106" width="14" height="10"/>
+    <rect x="231" y="106" width="14" height="10"/>
+  </g>
+</svg>

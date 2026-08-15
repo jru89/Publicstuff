@@ -65,13 +65,17 @@ function render() {
 function renderHome() {
   app.innerHTML = `
     <div class="home-hero">
-      <h1>Rijbewijs A Exam Trainer</h1>
+      <div class="home-hero-glow"></div>
+      <h1>License A to Zyzz</h1>
       <p class="home-sub">Practice for the Belgian motorcycle theory exam.</p>
     </div>
     <div class="home-actions">
       <button class="btn-primary btn-large" id="start-exam">Start practice exam</button>
       <button class="btn-secondary btn-large" id="browse-lessons">Browse lessons</button>
       <button class="btn-secondary btn-large" id="view-history">My history</button>
+    </div>
+    <div class="home-hero-photo-wrap">
+      <img class="home-hero-photo" src="icons/bianca-hero.png" alt="" onerror="this.parentElement.style.display='none'" />
     </div>
     <p class="home-note">50 questions &middot; 15 seconds each &middot; pass mark 41/50</p>
   `;

@@ -1,0 +1,13 @@
+<svg viewBox="0 0 280 260" xmlns="http://www.w3.org/2000/svg">
+  <title>Road narrowing with an oncoming vehicle</title>
+  <desc>Top-down view of a road that narrows to a single-vehicle-width passage, with two vehicles approaching from opposite directions, one on either side of the narrow section.</desc>
+  <rect width="280" height="260" fill="#f8fafc"/>
+
+  <path d="M 0,80 L 100,80 L 120,120 L 160,120 L 180,80 L 280,80 L 280,180 L 180,180 L 160,140 L 120,140 L 100,180 L 0,180 Z" fill="#64748b"/>
+
+  <!-- vehicle approaching from the left, before the narrow section -->
+  <rect x="30" y="94" width="34" height="30" rx="6" fill="#2563eb"/>
+
+  <!-- vehicle approaching from the right, before the narrow section -->
+  <rect x="216" y="136" width="34" height="30" rx="6" fill="#f59e0b"/>
+</svg>

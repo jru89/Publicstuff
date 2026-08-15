@@ -1,0 +1,20 @@
+<svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+  <title>Passenger riding sidesaddle</title>
+  <desc>A motorcycle with a rider and a passenger sitting sideways on the pillion seat, both feet on one side, rather than straddling the seat normally.</desc>
+  <rect width="220" height="220" fill="#f8fafc"/>
+  <line x1="10" y1="182" x2="210" y2="182" stroke="#cbd5e1" stroke-width="3"/>
+
+  <circle cx="30" cy="166" r="20" fill="#1e293b"/>
+  <circle cx="170" cy="166" r="20" fill="#1e293b"/>
+  <path d="M 30,166 L 60,110 L 140,106 L 170,166" fill="none" stroke="#1e293b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="90" y="98" width="30" height="12" rx="5" fill="#1e293b"/>
+
+  <!-- rider -->
+  <circle cx="102" cy="70" r="12" fill="#2563eb"/>
+  <rect x="92" y="82" width="20" height="30" rx="8" fill="#2563eb"/>
+
+  <!-- passenger, sitting sideways, both legs to one side -->
+  <circle cx="140" cy="76" r="11" fill="#f59e0b"/>
+  <rect x="128" y="87" width="24" height="26" rx="8" fill="#f59e0b"/>
+  <path d="M 140,113 Q 165,120 168,150" stroke="#f59e0b" stroke-width="10" stroke-linecap="round" fill="none"/>
+</svg>

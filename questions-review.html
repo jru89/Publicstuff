@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Question bank review</title>
+<style>
+  body { font-family: sans-serif; background: #0f172a; color: #f1f5f9; padding: 24px; margin: 0; }
+  h1 { font-size: 1.4rem; margin-bottom: 4px; }
+  #summary { color: #94a3b8; font-size: 0.9rem; margin-bottom: 24px; }
+  h2.lesson-heading {
+    font-size: 1.05rem;
+    color: #38bdf8;
+    margin: 32px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #334155;
+  }
+  .q-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 14px;
+  }
+  .q-meta { color: #64748b; font-size: 0.75rem; margin-bottom: 6px; }
+  .q-text { font-weight: 600; margin-bottom: 10px; }
+  .q-image-wrap { margin-bottom: 10px; }
+  .q-image-wrap img {
+    max-width: 140px;
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 8px;
+    display: block;
+  }
+  .missing-asset {
+    display: none;
+    color: #fff;
+    background: #ef4444;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    border-radius: 6px;
+    max-width: 200px;
+  }
+  .q-options { list-style: none; padding: 0; margin: 0 0 10px; }
+  .q-options li {
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+    background: #0f172a;
+    border: 1px solid #334155;
+  }
+  .q-options li.correct {
+    border-color: #22c55e;
+    background: rgba(34,197,94,0.12);
+    color: #86efac;
+    font-weight: 600;
+  }
+  .q-exp { color: #94a3b8; font-size: 0.82rem; }
+  .filter-bar { margin-bottom: 16px; }
+  .filter-bar label { margin-right: 16px; font-size: 0.85rem; color: #cbd5e1; }
+</style>
+</head>
+<body>
+  <h1>Question bank review</h1>
+  <div id="summary">Loading...</div>
+  <div class="filter-bar">
+    <label><input type="checkbox" id="only-images" /> Show only image-based questions</label>
+  </div>
+  <div id="content"></div>
+
+  <script type="module">
+    import { QUESTIONS } from "./js/data/questions.js";
+    import { LESSONS } from "./js/data/lessons.js";
+
+    const summary = document.getElementById("summary");
+    const content = document.getElementById("content");
+    const onlyImagesToggle = document.getElementById("only-images");
+
+    const withImages = QUESTIONS.filter((q) => q.image).length;
+    summary.textContent = `${QUESTIONS.length} total questions — ${withImages} include an image/sign.`;
+
+    function lessonTitle(lessonId) {
+      const lesson = LESSONS.find((l) => l.id === lessonId);
+      return lesson ? `${lesson.category}${lesson.id}. ${lesson.title}` : `Lesson ${lessonId}`;
+    }
+
+    function render() {
+      const onlyImages = onlyImagesToggle.checked;
+      const grouped = new Map();
+      for (const q of QUESTIONS) {
+        if (onlyImages && !q.image) continue;
+        if (!grouped.has(q.lessonId)) grouped.set(q.lessonId, []);
+        grouped.get(q.lessonId).push(q);
+      }
+      const lessonIds = [...grouped.keys()].sort((a, b) => a - b);
+
+      content.innerHTML = lessonIds
+        .map((lessonId) => {
+          const questions = grouped.get(lessonId);
+          return `
+            <h2 class="lesson-heading">${lessonTitle(lessonId)} (${questions.length})</h2>
+            ${questions
+              .map(
+                (q) => `
+              <div class="q-card">
+                <div class="q-meta">${q.id} &middot; category ${q.category}</div>
+                <div class="q-text">${q.q}</div>
+                ${
+                  q.image
+                    ? `<div class="q-image-wrap">
+                         <img src="${q.image}" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                         <div class="missing-asset">MISSING ASSET: ${q.image}</div>
+                       </div>`
+                    : ""
+                }
+                <ul class="q-options">
+                  ${q.options
+                    .map(
+                      (opt, i) => `<li class="${i === q.correct ? "correct" : ""}">${opt}${i === q.correct ? " ✓" : ""}</li>`
+                    )
+                    .join("")}
+                </ul>
+                ${q.exp ? `<div class="q-exp">${q.exp}</div>` : ""}
+              </div>`
+              )
+              .join("")}
+          `;
+        })
+        .join("");
+    }
+
+    onlyImagesToggle.addEventListener("change", render);
+    render();
+  </script>
+</body>
+</html>

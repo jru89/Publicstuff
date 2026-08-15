@@ -1,0 +1,23 @@
+<svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+  <title>Person pushing a moped</title>
+  <desc>A person standing beside a moped, pushing it along by the handlebars while walking, no helmet worn.</desc>
+  <rect width="220" height="220" fill="#f8fafc"/>
+  <line x1="10" y1="182" x2="210" y2="182" stroke="#cbd5e1" stroke-width="3"/>
+
+  <!-- moped -->
+  <g transform="translate(90,0)">
+    <circle cx="10" cy="166" r="15" fill="#1e293b"/>
+    <circle cx="80" cy="166" r="15" fill="#1e293b"/>
+    <path d="M 10,166 L 28,148 L 62,148 L 80,166" fill="none" stroke="#1e293b" stroke-width="6" stroke-linecap="round"/>
+    <rect x="34" y="136" width="24" height="12" rx="5" fill="#1e293b"/>
+  </g>
+
+  <!-- person, walking beside it, one hand on the handlebar -->
+  <g transform="translate(40,0)">
+    <circle cx="20" cy="70" r="13" fill="#334155"/>
+    <rect x="6" y="86" width="28" height="56" rx="12" fill="#334155"/>
+    <line x1="30" y1="96" x2="66" y2="112" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+    <line x1="14" y1="142" x2="10" y2="180" stroke="#334155" stroke-width="10" stroke-linecap="round"/>
+    <line x1="26" y1="142" x2="32" y2="180" stroke="#334155" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>

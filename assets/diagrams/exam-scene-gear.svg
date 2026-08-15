@@ -1,0 +1,26 @@
+<svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+  <title>Rider wearing protective gear</title>
+  <desc>A standing rider wearing a helmet, gloves, a jacket, and boots, with no text labels.</desc>
+  <rect width="200" height="260" fill="#f8fafc"/>
+
+  <!-- helmet -->
+  <ellipse cx="100" cy="46" rx="26" ry="30" fill="#1e293b"/>
+  <rect x="76" y="52" width="48" height="18" rx="8" fill="#f8fafc"/>
+
+  <!-- jacket / torso -->
+  <rect x="65" y="76" width="70" height="86" rx="16" fill="#2563eb"/>
+
+  <!-- arms with gloves -->
+  <rect x="38" y="86" width="24" height="66" rx="10" fill="#2563eb"/>
+  <circle cx="50" cy="158" r="14" fill="#1e293b"/>
+  <rect x="138" y="86" width="24" height="66" rx="10" fill="#2563eb"/>
+  <circle cx="150" cy="158" r="14" fill="#1e293b"/>
+
+  <!-- legs -->
+  <rect x="72" y="160" width="24" height="70" rx="8" fill="#334155"/>
+  <rect x="104" y="160" width="24" height="70" rx="8" fill="#334155"/>
+
+  <!-- boots -->
+  <rect x="66" y="222" width="34" height="18" rx="6" fill="#1e293b"/>
+  <rect x="100" y="222" width="34" height="18" rx="6" fill="#1e293b"/>
+</svg>

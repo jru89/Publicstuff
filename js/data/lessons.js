@@ -1033,52 +1033,92 @@ export const LESSONS = [
       <p>Belgian traffic law classifies violations by severity (1st through
       4th degree). The 3rd and 4th degree cover the most serious rule
       breaches — the ones most likely to cause real harm. This is a
-      motorcycle-relevant summary of that official list.</p>
+      motorcycle-relevant summary of that official list, grouped by theme
+      so it's easier to scan than one long numbered list.</p>
+
+      <div class="fault-legend">
+        <span class="fault-badge fault-badge-3">3rd degree</span> Serious — the 30 items below.
+        <span class="fault-badge fault-badge-4">4th degree</span> Most serious — 7 items, higher risk.
+      </div>
 
       <h3>3rd degree violations</h3>
-      <ol>
-        <li>Not immediately obeying the orders of an authorized person (e.g. a police officer).</li>
-        <li>Not moving a stationary/parked vehicle when an authorized person instructs you to.</li>
-        <li>Following the wrong carriageway on a road with two or three clearly separated carriageways, except where local signs allow otherwise.</li>
-        <li>Not crossing an oncoming vehicle on the right (including at intersections, unless markings say otherwise).</li>
-        <li>Not leaving enough sideways distance when crossing an oncoming vehicle, and not swerving right if needed.</li>
-        <li>When crossing/overtaking is difficult due to road width, not using the level verge safely — or doing so on a cycle path or a parking-reserved strip, which is never allowed.</li>
-        <li>Crossing a tram illegally on the left when the right side is actually passable.</li>
-        <li>Not moving as far right as possible, or increasing speed, while being overtaken on the left.</li>
-        <li>Overtaking to the left without being able to see oncoming traffic far enough ahead to do it safely.</li>
-        <li>Overtaking to the left of a towed combination or a vehicle with more than two wheels: at an unbarriered, unlit level crossing; when the vehicle you're overtaking is itself overtaking another vehicle (except on 3+ lane roads); or when it's stopping for or approaching an uncontrolled pedestrian/cyclist crossing.</li>
-        <li>Before turning left, not checking that a following vehicle hasn't already started to overtake you, and endangering drivers continuing normally on the road you're leaving.</li>
-        <li>When turning left, not yielding to oncoming traffic on the road you're leaving.</li>
-        <li>When changing direction, not yielding to drivers and pedestrians continuing on other parts of the same road.</li>
-        <li>When changing direction, not yielding to pedestrians crossing the road you're entering.</li>
-        <li>In a residential home zone: endangering or obstructing pedestrians, not taking extra care around children, or exceeding 20 km/h.</li>
-        <li>On roads reserved for pedestrians/cyclists/riders: endangering or obstructing other users, not taking extra care around children, or needlessly blocking traffic (max. 30 km/h).</li>
-        <li>In a pedestrian zone: not driving at walking pace, not giving way to pedestrians, or endangering/obstructing them.</li>
-        <li>In a play street: not driving at walking pace, not yielding to playing children, not dismounting when needed (cyclists), or endangering/obstructing them.</li>
-        <li>Not using low/high beam and rear lights between dusk and dawn, or whenever visibility drops below about 200m.</li>
-        <li><strong>Motorcycle child passenger rules:</strong> children under 3 may never ride on a moped or motorcycle. Children 3&ndash;7 need a suitable child restraint system and may not ride on a motorcycle over 125cc. On a motorcycle with a sidecar, children under 8 must use a suitable restraint system fitted in the sidecar.</li>
-        <li>Not immediately clearing the way and yielding when you hear a priority vehicle's siren approaching.</li>
-        <li>Endangering pedestrians on a sidewalk, a pedestrian-reserved path (signs D9/D10), a verge, a traffic island, a play street, or a residential home zone.</li>
-        <li>Not slowing down when passing a stopped bus/coach/trolleybus/minibus/tram that's letting passengers on or off.</li>
-        <li>At a stop without a refuge island, not stopping to let passengers safely reach the vehicle/sidewalk/verge, and not pulling away except at moderate speed.</li>
-        <li>Where traffic is controlled by an authorized person or lights: not letting pedestrians who lawfully stepped onto the roadway finish crossing at a normal pace — and always stopping before a pedestrian crossing when your direction has a red signal.</li>
-        <li>At an uncontrolled pedestrian crossing: not approaching at moderate speed, and not yielding to pedestrians on it or about to step onto it.</li>
-        <li>Breaking through a supervised group of children/school pupils/disabled or elderly people, or ignoring the instructions of the wardens protecting such a crossing.</li>
-        <li>Endangering a cyclist or class-A moped rider: not doubling caution around children/elderly cyclists, not leaving at least 1 meter of sideways distance, or not approaching a cyclist crossing at moderate speed / stopping if needed.</li>
-        <li>Breaking through a military column, a procession/parade/event, or a group of cycling-race participants — or not immediately swerving and stopping when approaching a group of cycling-race riders.</li>
-        <li>Not following the instructions of authorized military personnel, event signalers, road captains for cyclist/motorcyclist groups, group leaders for pedestrians/riders, or roadworks site supervisors.</li>
-      </ol>
+
+      <h4 class="fault-group-title">Authorized persons &amp; priority vehicles</h4>
+      <ul class="fault-list">
+        <li class="fault-item fault-item-3">Not immediately obeying the orders of an authorized person (e.g. a police officer).</li>
+        <li class="fault-item fault-item-3">Not moving a stationary/parked vehicle when an authorized person instructs you to.</li>
+        <li class="fault-item fault-item-3">Not immediately clearing the way and yielding when you hear a priority vehicle's siren approaching.</li>
+        <li class="fault-item fault-item-3">Not following the instructions of authorized military personnel, event signalers, road captains for cyclist/motorcyclist groups, group leaders for pedestrians/riders, or roadworks site supervisors.</li>
+      </ul>
+
+      <h4 class="fault-group-title">Crossing oncoming traffic &amp; tram tracks</h4>
+      <ul class="fault-list">
+        <li class="fault-item fault-item-3">Following the wrong carriageway on a road with two or three clearly separated carriageways, except where local signs allow otherwise.</li>
+        <li class="fault-item fault-item-3">Not crossing an oncoming vehicle on the right (including at intersections, unless markings say otherwise).</li>
+        <li class="fault-item fault-item-3">Not leaving enough sideways distance when crossing an oncoming vehicle, and not swerving right if needed.</li>
+        <li class="fault-item fault-item-3">When crossing/overtaking is difficult due to road width, not using the level verge safely — or doing so on a cycle path or a parking-reserved strip, which is never allowed.</li>
+        <li class="fault-item fault-item-3">Crossing a tram illegally on the left when the right side is actually passable.</li>
+      </ul>
+
+      <h4 class="fault-group-title">Overtaking</h4>
+      <ul class="fault-list">
+        <li class="fault-item fault-item-3">Not moving as far right as possible, or increasing speed, while being overtaken on the left.</li>
+        <li class="fault-item fault-item-3">Overtaking to the left without being able to see oncoming traffic far enough ahead to do it safely.</li>
+        <li class="fault-item fault-item-3">Overtaking to the left of a towed combination or a vehicle with more than two wheels: at an unbarriered, unlit level crossing; when the vehicle you're overtaking is itself overtaking another vehicle (except on 3+ lane roads); or when it's stopping for or approaching an uncontrolled pedestrian/cyclist crossing.</li>
+      </ul>
+
+      <h4 class="fault-group-title">Turning &amp; changing direction</h4>
+      <ul class="fault-list">
+        <li class="fault-item fault-item-3">Before turning left, not checking that a following vehicle hasn't already started to overtake you, and endangering drivers continuing normally on the road you're leaving.</li>
+        <li class="fault-item fault-item-3">When turning left, not yielding to oncoming traffic on the road you're leaving.</li>
+        <li class="fault-item fault-item-3">When changing direction, not yielding to drivers and pedestrians continuing on other parts of the same road.</li>
+        <li class="fault-item fault-item-3">When changing direction, not yielding to pedestrians crossing the road you're entering.</li>
+      </ul>
+
+      <h4 class="fault-group-title">Special low-speed zones</h4>
+      <ul class="fault-list">
+        <li class="fault-item fault-item-3">In a residential home zone: endangering or obstructing pedestrians, not taking extra care around children, or exceeding 20 km/h.</li>
+        <li class="fault-item fault-item-3">On roads reserved for pedestrians/cyclists/riders: endangering or obstructing other users, not taking extra care around children, or needlessly blocking traffic (max. 30 km/h).</li>
+        <li class="fault-item fault-item-3">In a pedestrian zone: not driving at walking pace, not giving way to pedestrians, or endangering/obstructing them.</li>
+        <li class="fault-item fault-item-3">In a play street: not driving at walking pace, not yielding to playing children, not dismounting when needed (cyclists), or endangering/obstructing them.</li>
+      </ul>
+
+      <h4 class="fault-group-title">Lights &amp; visibility</h4>
+      <ul class="fault-list">
+        <li class="fault-item fault-item-3">Not using low/high beam and rear lights between dusk and dawn, or whenever visibility drops below about 200m.</li>
+      </ul>
+
+      <h4 class="fault-group-title">Passengers</h4>
+      <ul class="fault-list">
+        <li class="fault-item fault-item-3"><strong>Motorcycle child passenger rules:</strong> children under 3 may never ride on a moped or motorcycle. Children 3&ndash;7 need a suitable child restraint system and may not ride on a motorcycle over 125cc. On a motorcycle with a sidecar, children under 8 must use a suitable restraint system fitted in the sidecar.</li>
+      </ul>
+
+      <h4 class="fault-group-title">Pedestrians &amp; vulnerable road users</h4>
+      <ul class="fault-list">
+        <li class="fault-item fault-item-3">Endangering pedestrians on a sidewalk, a pedestrian-reserved path (signs D9/D10), a verge, a traffic island, a play street, or a residential home zone.</li>
+        <li class="fault-item fault-item-3">Not slowing down when passing a stopped bus/coach/trolleybus/minibus/tram that's letting passengers on or off.</li>
+        <li class="fault-item fault-item-3">At a stop without a refuge island, not stopping to let passengers safely reach the vehicle/sidewalk/verge, and not pulling away except at moderate speed.</li>
+        <li class="fault-item fault-item-3">Where traffic is controlled by an authorized person or lights: not letting pedestrians who lawfully stepped onto the roadway finish crossing at a normal pace — and always stopping before a pedestrian crossing when your direction has a red signal.</li>
+        <li class="fault-item fault-item-3">At an uncontrolled pedestrian crossing: not approaching at moderate speed, and not yielding to pedestrians on it or about to step onto it.</li>
+        <li class="fault-item fault-item-3">Breaking through a supervised group of children/school pupils/disabled or elderly people, or ignoring the instructions of the wardens protecting such a crossing.</li>
+        <li class="fault-item fault-item-3">Endangering a cyclist or class-A moped rider: not doubling caution around children/elderly cyclists, not leaving at least 1 meter of sideways distance, or not approaching a cyclist crossing at moderate speed / stopping if needed.</li>
+      </ul>
+
+      <h4 class="fault-group-title">Groups, processions &amp; organized events</h4>
+      <ul class="fault-list">
+        <li class="fault-item fault-item-3">Breaking through a military column, a procession/parade/event, or a group of cycling-race participants — or not immediately swerving and stopping when approaching a group of cycling-race riders.</li>
+      </ul>
 
       <h3>4th degree violations (most serious)</h3>
-      <ol>
-        <li>Ignoring an authorized person's stop signal — arms held horizontally (stop for traffic crossing that direction) or a red light waved across the road (stop for traffic facing it).</li>
-        <li>Encouraging or challenging a driver to drive excessively fast.</li>
-        <li>Overtaking to the left of a towed combination or a vehicle with more than two wheels near the top of a hill or in a bend with insufficient visibility, unless it's possible without crossing the solid centerline.</li>
-        <li>Entering a level crossing while the barriers are moving or closed, the red lights are flashing, or the sound signal is active.</li>
-        <li>On motorways and expressways: using central-reservation crossovers, making a U-turn, reversing, or driving against the flow of traffic.</li>
-        <li>Stopping or parking on a level crossing.</li>
-        <li>Taking part in a speed or sporting contest on the public road without special authorization from the competent authority.</li>
-      </ol>
+      <ul class="fault-list">
+        <li class="fault-item fault-item-4">Ignoring an authorized person's stop signal — arms held horizontally (stop for traffic crossing that direction) or a red light waved across the road (stop for traffic facing it).</li>
+        <li class="fault-item fault-item-4">Encouraging or challenging a driver to drive excessively fast.</li>
+        <li class="fault-item fault-item-4">Overtaking to the left of a towed combination or a vehicle with more than two wheels near the top of a hill or in a bend with insufficient visibility, unless it's possible without crossing the solid centerline.</li>
+        <li class="fault-item fault-item-4">Entering a level crossing while the barriers are moving or closed, the red lights are flashing, or the sound signal is active.</li>
+        <li class="fault-item fault-item-4">On motorways and expressways: using central-reservation crossovers, making a U-turn, reversing, or driving against the flow of traffic.</li>
+        <li class="fault-item fault-item-4">Stopping or parking on a level crossing.</li>
+        <li class="fault-item fault-item-4">Taking part in a speed or sporting contest on the public road without special authorization from the competent authority.</li>
+      </ul>
     `,
   },
 ];

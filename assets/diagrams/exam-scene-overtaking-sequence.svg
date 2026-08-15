@@ -1,0 +1,18 @@
+<svg viewBox="0 0 220 320" xmlns="http://www.w3.org/2000/svg">
+  <title>Motorcycle overtaking a car</title>
+  <desc>Top-down view of a motorcycle in the oncoming lane, alongside a car, in the middle of an overtaking maneuver.</desc>
+  <rect width="220" height="320" fill="#f8fafc"/>
+
+  <rect x="20" y="0" width="180" height="320" fill="#64748b"/>
+  <line x1="110" y1="0" x2="110" y2="320" stroke="#f8fafc" stroke-width="3" stroke-dasharray="16 12"/>
+
+  <!-- car being overtaken -->
+  <rect x="125" y="150" width="34" height="60" rx="7" fill="#f1f5f9" stroke="#334155" stroke-width="2"/>
+
+  <!-- motorcycle, alongside, in the oncoming lane -->
+  <g transform="translate(70,180)">
+    <circle cx="0" cy="-24" r="9" fill="#2563eb"/>
+    <circle cx="0" cy="24" r="9" fill="#2563eb"/>
+    <rect x="-6" y="-20" width="12" height="40" rx="5" fill="#2563eb"/>
+  </g>
+</svg>
